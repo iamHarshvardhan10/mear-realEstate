@@ -1,12 +1,12 @@
 import express from 'express';
-import mongooese from 'mongoose';
+import mongoose from 'mongoose';
 
 
 
 const app = express();
 
 
-mongooese.connect("mongodb://localhost:27017/mern-estate", {
+mongoose.connect("mongodb://localhost:27017/mern-estate", {
     useNewUrlParser:true,
     useUnifiedTopology:true,
 }).then(() => {
