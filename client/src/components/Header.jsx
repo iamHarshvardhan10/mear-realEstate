@@ -31,9 +31,9 @@ const Header = () => {
               About
             </li>
           </Link>
-          <Link to="profile">
+          <Link to="/profile">
             {
-              currentUser ? (
+              currentUser && Object.keys(currentUser).length > 0 ? (
                 <img className="rounded-full h-7 w-7 object-cover" src={currentUser.avatar} alt="profile" />
               ) :
               (
