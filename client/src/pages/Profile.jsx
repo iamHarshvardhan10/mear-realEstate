@@ -31,7 +31,7 @@ const Profile = () => {
   const [updateSuccess, setUpdateSuccess] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate()
-  console.log(formData)
+  // console.log(formData)
 
   useEffect(() => {
     if (file) {
@@ -119,6 +119,7 @@ const Profile = () => {
         return;
       }
       dispatch(signOutUserSuccess(data));
+      navigate('/sign-in')
     } catch (error) {
       dispatch(signOutUserFailure(error.message))
 
