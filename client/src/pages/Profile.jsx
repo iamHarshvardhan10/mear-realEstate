@@ -228,14 +228,14 @@ const Profile = () => {
         {showListingError ? "Error Showing Listings" : ""}
       </p>
       <div>
-        <h1>Your Listings</h1>
+        <h1 className="text-[28px] uppercase font-bold flex justify-center items-center mb-6">Your Listings</h1>
         {userListing &&
           userListing.length > 0 &&
           userListing.map((listing) => {
             return (
               <div
                 key={listing._id}
-                className="border rounded-lg p-3 flex justify-between items-center gap-4"
+                className="border rounded-lg p-3 flex justify-between items-center gap-4 mb-4"
               >
                 <Link to={`/listing/${listing._id}`}>
                   <img
