@@ -6,7 +6,7 @@ import authRouter from './routes/auth.route.js'
 import cookieParser from 'cookie-parser';
 import listingRouter from './routes/listing.route.js'
 
-import path from path;
+import path from 'path';
 
 
 
