@@ -41,6 +41,7 @@ const Profile = () => {
     }
   }, [file]);
 
+
   const handleFileUpload = (file) => {
     const storage = getStorage(app);
     const fileName = new Date().getTime() + file.name;
@@ -121,6 +122,7 @@ const Profile = () => {
       }
       dispatch(signOutUserSuccess(data));
       navigate("/sign-in");
+      localStorage.clear()
     } catch (error) {
       dispatch(signOutUserFailure(error.message));
     }
@@ -135,7 +137,7 @@ const Profile = () => {
         setShowListingError(true);
         return;
       }
-      console.log(data);
+      // console.log(data);
       setUserListing(data);
     } catch (error) {
       setShowListingError(true);
